@@ -1,0 +1,59 @@
+{% extends 'base1.html' %}
+{%load static%}
+{% load crispy_forms_tags %}
+{% block title %}Login{% endblock title %}
+
+
+{% block body %}
+<div class="container">
+ <div class="row my-3">
+  <div class="col-sm-6 offset-sm-3">
+   <h3 class="text-center">Login Here</h3>
+   <hr>
+
+   <form action="" method="post" class="form shadow p-5" novalidate id="loginForm">
+    {% csrf_token %}
+    
+    <div class="bg-light" id="msg">
+        {% for message in messages %}
+
+        <div class="alert alert-danger">
+
+            <h6 class="text-center" id="msg-info">{{ message }}</h6>
+
+        </div>
+        {% endfor %}
+    </div>
+    <div class="mb-3 email" id="login_email">
+     <label for="email" class="form-label">Email Address</label>
+     {{ form.email|as_crispy_field }}
+     <h5 id="emailHelp" class="form-text text-danger"></h5>
+    </div>
+    <div class="mb-3 password" id="login_password">
+     <label for="password" class="form-label">Password</label>
+     {{ form.password|as_crispy_field }}
+     <h5 id="passwordHelp" class="form-text text-danger"></h5>
+    </div>
+    <small><a href="#">Forgot Password ?</a></small> <br>
+    <div>
+        <input type="submit" class="btn btn-outline-secondary mt-2 container-fluid" value="Login" id="login_btn" >
+    </div>
+    
+    <br>
+    <div class="text-center text-primary fw-bold"><small>Don't Have Account ? <a href="{% url 'register' %}"
+       class="text-danger">Create an Account</a> </small></div>
+   </form>
+  </div>
+ </div>
+</div>
+
+{% endblock body %}
+
+{% block JS %}
+
+
+
+
+
+
+{% endblock JS %}
