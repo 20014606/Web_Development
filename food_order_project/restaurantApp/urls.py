@@ -7,3 +7,6 @@ urlpatterns = [
     path('restaurant-menu/<int:id>/',restaurant_menu,name='restaurant-menu'),
     path('item-search/',item_search,name="item-search"),
 ]
+
+
+
