@@ -7,7 +7,7 @@ from accountApp.forms import *
 from django.contrib import messages
 from accountApp.models import *
 #from restaurantApp.models import *
-#from orderApp.models import *
+from orderApp.models import *
 from django.http import JsonResponse
 import json
 
