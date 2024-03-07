@@ -18,10 +18,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from accountApp.views import *
-# from restaurantApp.views import *
+from restaurantApp.views import *
 
 urlpatterns = [
     path('', include('accountApp.urls')),
+    path('', include('restaurantApp.urls')),
+    path('', include('orderApp.urls')),
     path('admin/', admin.site.urls),
 ]
 
