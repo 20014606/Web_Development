@@ -1,0 +1,70 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;;
+}
+
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+
+
+
+.navbar-nav .dropdown-menu a:hover{
+    background:#727474!important;
+    color:white;
+}
+
+
+
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+#image{
+    margin-left: 10px;
+}
+
+#name{
+    margin: auto;
+}
+
+#qty{
+    margin-right: 5px;
+}
+
+em{
+    color:red;
+    margin-top:20px;
+  }
+
+
+.category li{
+    border: 0.5px solid #b5b6b9;
+}
+
+
+.category .rest{
+    color: #353535;
+
+}
+
+
+.category .rest:hover{
+    color: #FF6F61;
+
+}
