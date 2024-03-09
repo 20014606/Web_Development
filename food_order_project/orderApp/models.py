@@ -19,7 +19,7 @@ class Order(models.Model):
     status = models.CharField(default='Pending', choices=STATUS_CHOICE, max_length=20)
     transaction_id = models.CharField(max_length=100, null=True, blank=True)
     shipping_charge = models.DecimalField(max_length=100, decimal_places=2, max_digits=5, null=True, blank=True,
-                                          default=50.00)
+                                          default=5)
     is_complete = models.BooleanField(default=False)
 
     def __str__(self):
