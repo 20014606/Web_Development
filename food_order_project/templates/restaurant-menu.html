@@ -1,0 +1,59 @@
+{% extends 'base1.html' %}
+{%load static%}
+{% load crispy_forms_tags %}
+{% block title %}all-restaurants{% endblock title %}
+{% block body %}
+
+<div class="container">
+  <div class="jumbotron mt-3">
+    <img class="d-block w-100" src="{% static 'images/banner/restaurant.jpg' %}" alt="...">
+    <h1 class="display-6 text-center">{{restaurant.name}}- {{restaurant.address}}</h1>
+    <p class="lead text-center">Restaurant Rating : {{ result}}</p>
+    <!-- <hr class="my-4"> -->
+  </div>
+  <div class="container">
+    {% for cat in category %}
+    
+    <div class="container mt-4">
+      <hr>
+      <h3 class="bg-secondary text-center text-light mx-auto p-2">{{cat.name}}</h3>
+      <div class="row">
+        {% for fooditem in cat.fooditem_set.all %}
+        <div class="col-md-4 mt-2">
+          <div class="card " style="width: 18rem;">
+            <img class="card-img-top" src="{{fooditem.image.url}}">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{fooditem.name}}</h5>
+              <span class="text-danger"><br></span>
+              <span class="text-danger font-weight-bold">€ {{fooditem.price}}<br></span>
+              <div>
+                <button data-fooditem="{{fooditem.id}}" data-action="add" class="btn btn-outline-secondary mt-2 add-btn update-cart" id="{{fooditem.id}}">Add to cart</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="container mt-2">
+    <h3>Reviews: </h3>
+    {% for com in comment %}
+    <h6 class="text-bold">{{com.comment}}</h6>
+    <span>{{com.created_at}}</span><br>
+    <hr>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% endblock body %}
+
+
+{% block JS %}
+<!-- <script type="text/javascript" src="{% static 'js/localStorage.js' %}" async></script> -->
+<script type="text/javascript" src="{% static 'js/cart.js' %}" async></script>
+{% endblock JS%}
