@@ -28,7 +28,7 @@ SECRET_KEY = '20q4=t2d2r!8r+j6x9s0&nsk6-&jixrpb%#$+xsyktz6#_za5p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
 
 
 # Application definition
@@ -77,8 +77,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'food_order_project.wsgi.application'
+# WSGI_APPLICATION = 'food_order_project.wsgi.application'
 
+WSGI_APPLICATION = 'food_order_project.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
