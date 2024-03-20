@@ -1,5 +1,6 @@
 # Create a virtual environment
 echo "Creating a virtual environment..."
+yum install sqlite sqlite-devel
 python3.9 -m venv venv
 source venv/bin/activate
 
