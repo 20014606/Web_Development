@@ -23,5 +23,6 @@
       "src": "/(.*)",
       "dest": "food_order_project/wsgi.py"
     }
-  ]
+  ],
+  "outputDirectory": "static"
 }
