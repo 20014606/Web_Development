@@ -78,9 +78,11 @@ class TestUrls(TestCase):
     #     urls = reverse('address')
     #     self.assertEquals(resolve(urls).func, address)
 
+
     def test_address_updateUrl(self):
         urls = reverse('address-update')
         self.assertEquals(resolve(urls).func, address_update)
+
 
     # def test_buynowUrl(self):
     #     urls = reverse('buynow')
