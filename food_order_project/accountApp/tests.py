@@ -74,9 +74,9 @@ class TestUrls(TestCase):
         urls = reverse('logout')
         self.assertEquals(resolve(urls).func, logout_user)
 
-    # def test_addressUrl(self):
-    #     urls = reverse('address')
-    #     self.assertEquals(resolve(urls).func, address)
+    def test_addressUrl(self):
+        urls = reverse('address')
+        self.assertEquals(resolve(urls).func, address)
 
 
     def test_address_updateUrl(self):
